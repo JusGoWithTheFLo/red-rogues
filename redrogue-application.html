@@ -20,17 +20,32 @@
     <p>Please fill out this form with the required information</p>
     <form action="">
      <fieldset>
-      <label>Enter Your Neopolis Name: <input></label>
-      <label>Enter Your Discord Name with #: <input></label>
-      <label>Enter Your Email: <input></label>
-      <label>Create a New Password: <input></label>
+      <label>Enter Your Neopolis Name: <input type="text" required /></label>
+      <label>Enter Your Discord Name with #: <input type="text" required /></label>
+      <label>Enter Your Email: <input type="email" required /></label>
+      <label>Create a New Password: <input type="password" pattern="[a-z0-9]{8,}" required /></label>
      </fieldset>
      
      <fieldset>
+      How long have you been playing?
+      <label>Seasons: <input type="number" min="1" max="100" /></label>
+      <label><input type="checkbox" required /> I accept the <a href="">terms and conditions</a></label>
      </fieldset>
      
      <fieldset>
+      <label>Upload a profile picture: <input type="file" /></label>
+      <label>Input your age (years): <input type="number" min="18" max="120" required /></label>
+      <label>How did you hear about us?
+       <select>
+        <option value="">(select one)</option>
+        <option value="1">Neopolis Game</option>
+        <option value="2">Neopolis Discord</option>
+        <option value="3">Other</option>
+       </select>
+      <label>Provide a bio:<textarea></textarea>
      </fieldset>
+     
+     <input type="submit" value="Submit" />
    </main>
      
    <footer>
